@@ -2,6 +2,7 @@
   "name": "zebrands-project",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://edwardillo.github.io/github-search",
   "type": "module",
   "scripts": {
     "dev": "vite",
