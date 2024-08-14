@@ -1,5 +1,5 @@
 import { Tab, Tabs, Box } from '@mui/material';
-import { BrowserRouter, Link, matchPath, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Link, matchPath, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import { Repositories } from './pages/Repositories/Repositories.tsx';
 import { Users } from './pages/Users/Users';
@@ -65,6 +65,7 @@ function App() {
     <BrowserRouter>
       <AppTabs />
       <Routes>
+        <Route path="/" element={<Navigate to="/users" />} />
         <Route path="*" element={<CurrentTab />} />
       </Routes>
     </BrowserRouter>
