@@ -17,6 +17,7 @@ export const Repositories = () => {
     try {
       setLoading(true);
       const newRepos = await fetchRepositories(query);
+      // @ts-expect-error type from octokit
       setRepos(newRepos);
     } catch {
       console.log('Error fetching repositories');

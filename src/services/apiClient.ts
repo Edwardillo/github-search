@@ -57,6 +57,7 @@ export const fetchUsers = async (searchQuery = '', page = 1) => {
       ...variables,
     });
 
+    // @ts-expect-error ignoring type from octokit
     return response.search.edges.map(edge => edge.node);
   } catch (e) {
     console.error(e);
